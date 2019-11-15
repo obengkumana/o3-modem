@@ -1,0 +1,30 @@
+{
+  "name": "o3-modem",
+  "version": "1.0.4",
+  "description": "O3 Modem : Send, Read SMS, dial USSD, signal monitor etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obengkumana/o3-modem.git"
+  },
+  "keywords": [
+    "modem",
+    "sms",
+    "ussd"
+  ],
+  "author": "Obengkumana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/obengkumana/o3-modem/issues"
+  },
+  "homepage": "https://github.com/obengkumana/o3-modem#readme",
+  "dependencies": {
+    "commander": "^3.0.1",
+    "events": "^3.0.0",
+    "express": "^4.17.1",
+    "serialport": "^7.1.5"
+  }
+}
