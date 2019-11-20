@@ -33,8 +33,8 @@ Feature :
 ** multiple Dial USSD,sms sender, sms center, not conflick
 
 Example code : in ```test.js```  
-$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text
-Other Documentation : next time :-)
+$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text  
+Other Documentation : next time :smile:
 
 Reff :
 * https://www.npmjs.com/package/modem
