@@ -32,10 +32,10 @@ var modem = require('o3-modem').Modem()
 Feature :
 ** multiple Dial USSD,sms sender, sms center, not conflick
 
-Example code : in ```test.js```  
-```$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text```  
-Other Documentation : next time :smile:
-
+Example code: [test.js](https://github.com/ahmadrasyidsalim/o3-modem/blob/master/test.js)  
+Execute:  ```$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text```  
+Other Documentation: next time :smile:  
+  
 Reff :
 * https://www.npmjs.com/package/modem
 * http://smstools3.kekekasvi.com/topic.php?id=288
