@@ -14,28 +14,26 @@ It supports:
 * 7bit (ascii) messages
 * Multipart messages
 * Translate SMS sender with alphabet, not numeric
-* Getting notifications when someone calls
-
+* Getting notifications when someone calls  
 Installation
 ------------
 ```
-git clone https://github.com/obengkumana/o3-modem  
-cd o3-modem  
-npm install or yarn (if you'd prefer yarn)
-```
-
+npm i o3-modem or yarn add o3-modem (if you'd prefer yarn)
+```  
 Instantiate
 -----------
 ```js
 const modem = require('o3-modem').Modem()
+```  
+Feature:  
+** multiple Dial USSD, sms sender, sms center, not conflick.  
+Example
+-------  
 ```
-Feature :
-** multiple Dial USSD, sms sender, sms center, not conflick
-
-Example code: [test.js](https://github.com/obengkumana/o3-modem/blob/master/test.js)  
-Execute:  ```$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text```  
-Other Documentation: next time :smile:  
-  
+$ git clone https://github.com/obengkumana/o3-modem  
+$ cd o3-modem  
+$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text
+```  
 Reff :
 * https://www.npmjs.com/package/modem
 * http://smstools3.kekekasvi.com/topic.php?id=288
