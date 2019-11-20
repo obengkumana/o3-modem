@@ -35,6 +35,7 @@ Example:
 ```
 $ git clone https://github.com/obengkumana/o3-modem  
 $ cd o3-modem  
+$ npm i or yarn (if you'd prefer yarn)  
 $ node test.js -p /dev/ttyUSB0 -u *888#
 ```  
 Reff :
