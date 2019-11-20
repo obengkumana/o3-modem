@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-'use strict';
-const args = require('commander');
-var modem = require('./index').Modem();
 
-function makeNumber(input) {
-    return Number(input);
-}
+'use strict'
+
+const args = require('commander')
+const modem = require('./index').Modem()
+
+const makeNumber = input => Number(input)
 
 args
   .version('1.0.0')
@@ -25,58 +25,44 @@ args
   .option('-um, --ussdmulti <multi>', ' Multi dial USSD. Delimiter with "|" ex : *123#|1|2')
   .option('--to   <tonumber>', 'Nomor Tujuan SMS.')
   .option('--text   <text>', 'Text SMS')
-  .parse(process.argv);
+  .parse(process.argv)
 
-  
+modem.openOptions.baudRate =args.baud
+modem.openOptions.dataBits = args.databits
+modem.openOptions.parity = args.parity
+modem.openOptions.stopBits = args.stopbits
 
-modem.openOptions.baudRate =args.baud;
-modem.openOptions.dataBits = args.databits;
-modem.openOptions.parity = args.parity;
-modem.openOptions.stopBits = args.stopbits;
+const ussd = () => {
+  if (!args.port) {
+    args.outputHelp()
+    args.missingArgument('port')
+    process.exit(-1)
+  }
 
-function ussd(){
-    if (!args.port) {
-        args.outputHelp();
-        args.missingArgument('port');
-        process.exit(-1);
-    }
+  modem.ussd_send = args.dialmode
 
-    modem.ussd_send=args.dialmode;
-
-    modem.open(args.port, function() {
-        // Read raw data;
-         modem.on('data', function(data) {
-             if (data) console.log(data);    
-         });
-
-        // Signal Monitor
-        // modem.on('signal', function(data) {
-        //     if (data) console.log('Signal : ',data);    
-        // });
-
-        var ADial=args.ussd.split('|');
-        var IProc=0;
-        ADial.forEach(function(Dial){
-            modem.sendUSSD(Dial,function(fullussd,d){
-                IProc++;
-                console.log('Respon USSD :',Dial);
-                if(d.Body){
-                    console.log(d.Body);
-                    if(d.Body.trim()==='+CUSD: 4')                       
-                        modem.close();
-                }
-
-                if(IProc===ADial.length)
-                    modem.close();
-            });
-        });       
-
-    });
+  modem.open(args.port, () => {
+    modem.on('data', data => {
+      if (data) console.log(data)
+    })
     
+    const ADial = args.ussd.split('|')
+    let IProc = 0
+
+    ADial.forEach(Dial => {
+      modem.sendUSSD(Dial, (_fullussd, d) => {
+        IProc++
+        console.log(`Respon USSD : ${Dial}`);
+        if (d.Body) {
+          console.log(d.Body);
+          if (d.Body.trim() === '+CUSD: 4') modem.close()
+        }
+        
+        if (IProc === ADial.length) modem.close()
+      })
+    })
+  })
 }
 
-
-if (args.ussd)
-    ussd()
-else
-    args.outputHelp();
+if (args.ussd) ussd()
+args.outputHelp()

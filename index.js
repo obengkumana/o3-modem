@@ -1,3 +1,3 @@
-return module.exports = {
-  Modem : require('./lib/o3-modem.js')
+module.exports = {
+  Modem: require('./lib/o3-modem.js')
 }
