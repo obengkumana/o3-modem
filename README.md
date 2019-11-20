@@ -19,7 +19,9 @@ It supports:
 Installation
 ------------
 ```
-npm install o3-modem
+git clone https://github.com/ahmadrasyidsalim/o3-modem  
+cd o3-modem  
+npm i or yarn (if you'd prefer yarn)
 ```
 
 Instantiate
