@@ -34,7 +34,7 @@ Example:
 ```
 $ git clone https://github.com/obengkumana/o3-modem  
 $ cd o3-modem  
-$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text
+$ node test.js -p /dev/ttyUSB0 -u *888#
 ```  
 Reff :
 * https://www.npmjs.com/package/modem
