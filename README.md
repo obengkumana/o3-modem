@@ -21,7 +21,7 @@ Installation
 ```
 git clone https://github.com/ahmadrasyidsalim/o3-modem  
 cd o3-modem  
-npm i or yarn (if you'd prefer yarn)
+npm install or yarn (if you'd prefer yarn)
 ```
 
 Instantiate
@@ -29,7 +29,7 @@ Instantiate
 ```
 var modem = require('o3-modem').Modem()
 ```
-Fitur :
+Feature :
 ** multiple Dial USSD,sms sender, sms center, not conflick
 
 Example code : in test.js
