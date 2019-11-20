@@ -26,11 +26,11 @@ npm install or yarn (if you'd prefer yarn)
 
 Instantiate
 -----------
-```
-var modem = require('o3-modem').Modem()
+```js
+const modem = require('o3-modem').Modem()
 ```
 Feature :
-** multiple Dial USSD,sms sender, sms center, not conflick
+** multiple Dial USSD, sms sender, sms center, not conflick
 
 Example code: [test.js](https://github.com/ahmadrasyidsalim/o3-modem/blob/master/test.js)  
 Execute:  ```$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text```  
