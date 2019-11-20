@@ -15,12 +15,13 @@ It supports:
 * Multipart messages
 * Translate SMS sender with alphabet, not numeric
 * Getting notifications when someone calls  
-Installation
+
+Installation:
 ------------
 ```
 npm i o3-modem or yarn add o3-modem (if you'd prefer yarn)
 ```  
-Instantiate
+Instantiate:
 -----------
 ```js
 const modem = require('o3-modem').Modem()
