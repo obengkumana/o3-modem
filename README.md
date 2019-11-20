@@ -26,10 +26,11 @@ Instantiate
 const modem = require('o3-modem').Modem()
 ```  
 Feature:  
-** multiple Dial USSD, sms sender, sms center, not conflick.  
+--------  
+* multiple Dial USSD, sms sender, sms center, not conflick.  
 
-Example
--------  
+Example:
+--------  
 ```
 $ git clone https://github.com/obengkumana/o3-modem  
 $ cd o3-modem  
