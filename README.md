@@ -33,8 +33,12 @@ Fitur:
 
 Example code:
 -------------  
-[```test.js```](https://github.com/ahmadrasyidsalim/o3-modem/blob/master/test.js)  
-```$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text```  
+```
+$ git clone https://github.com/ahmadrasyidsalim/o3-modem  
+$ cd o3-modem  
+$ npm i or yarn (if you'd prefer yarn)  
+$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text
+```  
 Other Documentation : next time :-)
 
 Reff :
