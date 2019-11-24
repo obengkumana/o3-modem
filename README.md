@@ -16,22 +16,25 @@ It supports:
 * Translate SMS sender with alphabet, not numeric
 * Getting notifications when someone calls
 
-Installation
+Installation:
+-------------
+```
+npm install o3-modem or yarn add o3-modem (if you'd prefer yarn)
+```
+
+Instantiate:
 ------------
+```js
+const modem = require('o3-modem').Modem()
 ```
-npm install o3-modem
-```
+Fitur:  
+------
+* multiple Dial USSD,sms sender, sms center, not conflick
 
-Instantiate
------------
-```
-var modem = require('o3-modem').Modem()
-```
-Fitur :
-** multiple Dial USSD,sms sender, sms center, not conflick
-
-Example code : in test.js
-$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text
+Example code:
+-------------  
+[```test.js```](https://github.com/ahmadrasyidsalim/o3-modem/blob/master/test.js)  
+```$ node test.js -p /dev/ttyUSB0 -u *888# --dialmode text```  
 Other Documentation : next time :-)
 
 Reff :
