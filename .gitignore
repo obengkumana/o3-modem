@@ -105,4 +105,4 @@ dist
 
 # npm/yarn lock-file
 package-lock.json
-yarn.lcok
+yarn.lock
